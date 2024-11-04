@@ -1,0 +1,50 @@
+
+PostgreSQL Command-Line Cheat Sheet for Accessing `app_schema.User` Table
+
+1. Connect to the Database
+   
+   \c snaptalk
+   
+
+2. List Schemas
+   
+   \dn
+   
+
+3. List Tables in Schema
+   
+   \dt app_schema.*
+   
+
+4. Describe Table Structure
+   
+   \d app_schema."User"
+   
+
+5. Query Data from Table
+   
+   SELECT * FROM app_schema."User";
+   
+
+6. Limit Results in Query
+   
+   SELECT * FROM app_schema."User" LIMIT 10;
+   
+
+7. Exit `psql`
+   
+   \q
+   
+
+Usage Guide:
+- \c: Connect to a specific database.
+- \dn: List all schemas in the current database.
+- \dt: List tables in a specific schema.
+- \d: Describe the structure of a table.
+- SELECT: Query data from a table.
+- LIMIT: Limit the number of results returned in a query.
+- \q: Exit the `psql` command-line interface.
+
+Notes:
+- Replace `<postgres_container_id_or_name>` with the actual container ID or name when accessing PostgreSQL via Docker.
+- Ensure you are connected to the correct schema if `app_schema` is not the default.
